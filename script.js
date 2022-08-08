@@ -1,3 +1,16 @@
+class DatosEncuesta{
+    constructor (linea, estacionOn, estacionOff, hora, edad, motivo) {
+    this.linea = linea;
+    this.estacionOn = estacionOn;
+    this.estacionOff = estacionOff;
+    this.hora = hora;
+    this.edad = edad;
+    this.motivo = motivo
+    }
+}
+
+
+
 function ingreso () {
 
     alert("El encuestado debe ser mayor de 16 años.");
