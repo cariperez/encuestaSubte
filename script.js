@@ -1,16 +1,3 @@
-class DatosEncuesta{
-    constructor (linea, estacionOn, estacionOff, hora, edad, motivo) {
-    this.linea = linea;
-    this.estacionOn = estacionOn;
-    this.estacionOff = estacionOff;
-    this.hora = hora;
-    this.edad = edad;
-    this.motivo = motivo
-    }
-}
-
-
-
 function ingreso () {
 
     alert("El encuestado debe ser mayor de 16 años.");
@@ -40,6 +27,27 @@ function ingreso () {
     confirm("Ya podemos empezar. Estás listo?");
 
 }
+
+ingreso ()
+
+class DatosEncuesta {
+    constructor(linea, estacionOn, estacionOff, hora, edad, motivo) {
+    this.linea = linea;
+    this.estacionOn = estacionOn;
+    this.estacionOff = estacionOff;
+    this.hora = hora;
+    this.edad = edad;
+    this.motivo = motivo;
+    }
+}
+
+const respuestasDatos = [];
+respuestasDatos.push(new DatosEncuesta("A", "Acoyte", "Congreso", "10 am", "20 años", "Estudio"));
+respuestasDatos.push(new DatosEncuesta("C", "Constitución", "Diagonal Norte", "8 am", "35 años", "Trabajo"));
+
+for (const datos of respuestasDatos)
+    respuestasDatos.reverse ();
+    
 
 function seccionA () {
 
@@ -80,10 +88,5 @@ function seccionA () {
 
 }
 
-function despedida (){
-    alert ("Gracias por participar!");
-}
-
-ingreso()
 seccionA ()
-despedida ()
+
