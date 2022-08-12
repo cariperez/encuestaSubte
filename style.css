@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300&family=Monda&family=Mulish:wght@200&family=Square+Peg&family=Zen+Loop&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.tituloSubte{
+    font-family: 'Figtree', sans-serif;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.fuente{
+    font-family: 'Figtree', sans-serif;
+}
+
+.css-container{
+    margin: 100px;
+}
+
+h1{
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+h2{
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+h3{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
