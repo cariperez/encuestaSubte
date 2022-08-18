@@ -1,121 +1,154 @@
-function ingreso () {
+// function ingreso () {
 
-    alert("El encuestado debe ser mayor de 16 años.");
+//     alert("El encuestado debe ser mayor de 16 años.");
   
-    let edad = " ";
-    let edadAprobada = false;
-    while (edadAprobada === false){
-        edad = parseInt(prompt("Ingresá tu edad."));
-        if (edad>15){
-            edadAprobada = true;
-        }   
-        else {
-            alert ("Necesitás ser mayor de 16 años para responder esta encuesta.");
-        }
-    }
+//     let edad = " ";
+//     let edadAprobada = false;
+//     while (edadAprobada === false){
+//         edad = parseInt(prompt("Ingresá tu edad."));
+//         if (edad>15){
+//             edadAprobada = true;
+//         }   
+//         else {
+//             alert ("Necesitás ser mayor de 16 años para responder esta encuesta.");
+//         }
+//     }
 
-    confirm("Ya podemos empezar. Estás listo?");
+// }
 
-}
-
-ingreso ()
+// ingreso ()
 
 
-class Registro {
-    constructor(id, edad, correo, telefono, linea, estacionOn, estacionOff, hora, motivo) {
-    this.id = id;
-    this.edad = edad;
-    this.correo = correo;
-    this.telefono = telefono;
-    this.linea = linea;
-    this.estacionOn = estacionOn;
-    this.estacionOff = estacionOff;
-    this.hora = hora;
-    this.motivo = motivo;
-    }
-}
+// class Registro {
+//     constructor(id, edad, correo, telefono, linea, estacionOn, estacionOff, hora, motivo) {
+//     this.id = id;
+//     this.edad = edad;
+//     this.correo = correo;
+//     this.telefono = telefono;
+//     this.linea = linea;
+//     this.estacionOn = estacionOn;
+//     this.estacionOff = estacionOff;
+//     this.hora = hora;
+//     this.motivo = motivo;
+//     }
+// }
 
-const datosEncuestados = [];
-datosEncuestados.push(new Registro("001", "20 años", "leo@gmail.com", "123456789", "A", "Acoyte", "Congreso", "10 am", "Estudio"));
-datosEncuestados.push(new Registro("002", "35 años", "juana@gmail.com", "789456123", "C", "Constitución", "Diagonal Norte", "8 am",  "Trabajo"));
-datosEncuestados.push(new Registro("003", "43 años", "maxi@gmail.com", "456789123", "B", "Florida", "Rosas", "17 pm",  "Trabajo"));
+// const datosEncuestados = [];
+// datosEncuestados.push(new Registro("001", "20 años", "leo@gmail.com", "123456789", "A", "Acoyte", "Congreso", "10 am", "Estudio"));
+// datosEncuestados.push(new Registro("002", "35 años", "juana@gmail.com", "789456123", "C", "Constitución", "Diagonal Norte", "8 am",  "Trabajo"));
+// datosEncuestados.push(new Registro("003", "43 años", "maxi@gmail.com", "456789123", "B", "Florida", "Rosas", "17 pm",  "Trabajo"));
 
-console.table (datosEncuestados);
+// console.table (datosEncuestados);
    
-const nuevoEncuestado = {
-    id: "004",
-    edad: prompt("Ingresá tu edad: "),
-    correo: prompt("Ingresá tu correo electrónico: "),
-    telefono: prompt("Ingresá tu teléfono: "),
-    linea: prompt("¿En qué línea te encontrás?"),
-    estacionOn: prompt("¿En qué estación ingresaste al Subte?"),
-    estacionOff: prompt("¿En qué estación salís del Subte?"),
-    hora: prompt("¿A qué hora ingresaste al Subte?"),
-    motivo: prompt("Elegí el motivo de tu viaje: trabajo - estudio - compras - salud - otros")
-};
+// const nuevoEncuestado = {
+//     id: "004",
+//     edad: prompt("Ingresá tu edad: "),
+//     correo: prompt("Ingresá tu correo electrónico: "),
+//     telefono: prompt("Ingresá tu teléfono: "),
+//     linea: prompt("¿En qué línea te encontrás?"),
+//     estacionOn: prompt("¿En qué estación ingresaste al Subte?"),
+//     estacionOff: prompt("¿En qué estación salís del Subte?"),
+//     hora: prompt("¿A qué hora ingresaste al Subte?"),
+//     motivo: prompt("Elegí el motivo de tu viaje: trabajo - estudio - compras - salud - otros")
+// };
 
-datosEncuestados.push(nuevoEncuestado);
+// datosEncuestados.push(nuevoEncuestado);
 
-console.table (datosEncuestados);
+// console.table (datosEncuestados);
 
-function buscarEstacion (){
-    let estacionBuscada = prompt ("¿Qué estación querés buscar?")
-    const resultado = datosEncuestados.find (estacion => estacion.estacionOn === estacionBuscada)
-    console.table (resultado)
-    }
+// function buscarEstacion (){
+//     let estacionBuscada = prompt ("¿Qué estación querés buscar?")
+//     const resultado = datosEncuestados.find (estacion => estacion.estacionOn === estacionBuscada)
+//     console.table (resultado)
+//     }
 
-buscarEstacion ()
+// buscarEstacion ()
 
-debugger
+// let respuesta1
+// let respuesta2
+// let respuesta3
+// let respuesta4
 
-let respuesta1
-let respuesta2
-let respuesta3
-let respuesta4
-    
-function seccionA () {
+const selectPregunta1 = document.getElementById("pregunta1")
 
-    respuesta1 = prompt("1- En general, ¿cómo calificás el servicio de Subte de la Ciudad de Buenos Aires? \n1-Muy bueno \n2-Bueno \n3-Regular \n4-Malo \n5-Muy malo \n9-NS/NC");
+const selectPregunta2 = document.getElementById("pregunta2")
 
-    while (respuesta1 != "1" && respuesta1 != "2" && respuesta1 != "3"  && respuesta1 != "4" && respuesta1 != "5" && respuesta1 != "9"){
-        alert ("Elegí una de las opciones ofrecidas.");
-        respuesta1 = prompt("1- En general, ¿cómo calificás el servicio de Subte de la Ciudad de Buenos Aires? \n1-Muy bueno \n2-Bueno \n3-Regular \n4-Malo \n5-Muy malo \n9-NS/NC")
-    }
-   
+const selectPregunta3 = document.getElementById("pregunta3")
 
-    respuesta2 = prompt("2- ¿Cuál de estos medios de transporte público creés que brinda un mejor servicio? \n1-Subte \n2-Colectivo \n3-Tren \n4-Metrobús \n5-Premetro \n7-Otros (especificar al final)");
+const selectPregunta4 = document.getElementById("pregunta4")
 
-    while(respuesta2 != "1" && respuesta2 != "2" && respuesta2 != "3"  && respuesta2 != "4" && respuesta2 != "5" && respuesta2 != "7") {
-        alert ("Elegí una de las opciones ofrecidas.");
-        respuesta2 = prompt("2- ¿Cuál de estos medios de transporte público creés que brinda un mejor servicio? \n1-Subte \n2-Colectivo \n3-Tren \n4-Metrobús \n5-Premetro \n7-Otros (especificar al final)")
-    }
+const selectPregunta5 = document.getElementById("pregunta5")
 
-    if (respuesta2 === "7"){
-            let respuesta2a = prompt("Ingrese un medio de transporte.") 
-    }
+function cargaPreg1 () {
+    opcionesCalif.forEach(opcion =>{
+        selectPregunta1.innerHTML += `<option value =""> ${opcion} </option>`
+    });
+}
 
-    respuesta3 = prompt("3- ¿Utilizaste alguna vez la red WiFi del subte? \n1-Sí \n2-No");
+function cargaPreg2 () {
+    opcionesModos.forEach(opcion =>{
+        selectPregunta2.innerHTML += `<option value =""> ${opcion} </option>`
+    });
+}
 
-    while (respuesta3 != "1" && respuesta3 != "2") {
-        alert ("Elegí una de las opciones ofrecidas.");
-        respuesta3 = prompt("3- ¿Utilizaste alguna vez la red WiFi del subte? \n1-Sí \n2-No")
-    }
+function cargaPreg3 () {
+    opcionesSiNo.forEach(opcion =>{
+        selectPregunta3.innerHTML += `<option value =""> ${opcion} </option>`
+    });
+}
 
-    if (respuesta3 === "1"){
-            respuesta4 = prompt("4-Cómo calificarías el servicio de WiFI? \n1-Excelente \n2-Bueno \n3-Regular \n4-Malo")
-    }
+function cargaPreg4 () {
+    opcionesCalif.forEach(opcion =>{
+        selectPregunta4.innerHTML += `<option value =""> ${opcion} </option>`
+    });
+}
 
-    while (respuesta4 != "1" && respuesta4 != "2" && respuesta4 != "3" && respuesta4 != "4"){
-            alert ("Elegí una de las opciones ofrecidas.");
-            respuesta4 = prompt("4-Cómo calificarías el servicio de WiFI? \n1-Excelente \n2-Bueno \n3-Regular \n4-Malo")
+function cargaPreg5 () {
+    opcionesCalif.forEach(opcion =>{
+        selectPregunta5.innerHTML += `<option value =""> ${opcion} </option>`
+    });
+}
+
+cargaPreg1()
+cargaPreg2()
+cargaPreg3()
+cargaPreg4()
+cargaPreg5()
+
+let rta1
+let rta2
+let rta3
+let rta4
+let rta5
+
+class Respuestas {
+    constructor(rta1, rta2, rta3, rta4, rta5){
+        this.rta1 = rta1
+        this.rta2 = rta2
+        this.rta3 = rta3
+        this.rta4 = rta4
+        this.rta5 = rta5
     }
 }
 
-seccionA ()
+const respuestas1 = {
+    rta1: "1",
+    rta2: "2",
+    rta3: "3",
+    rta4: "4",
+    rta5: "5", 
+}
 
-const respuestasEncuestado001 = []
 
-respuestasEncuestado001.push(respuesta1, respuesta2, respuesta3, respuesta4)
+const botonA = document.querySelector(".btn-rtas")
 
-console.table (respuestasEncuestado001)
+botonA.addEventListener ("click", ()=>
+    alert("Tus respuestas son: ", respuestas1))
+
+
+// const respuestasEncuestado001 = []
+
+// respuestasEncuestado001.push(respuesta1, respuesta2, respuesta3, respuesta4)
+
+// console.table (respuestasEncuestado001)
 
