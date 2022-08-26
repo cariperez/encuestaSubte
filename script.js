@@ -1,111 +1,68 @@
-// function ingreso () {
+class Registro {
+    constructor(id, edad, correo, linea, estacionOn, estacionOff, hora, motivo, rta1, rta2, rta3, rta4, rta5, rta6, rta7, rta8, rta9, rta10, rta11) {
+    this.id = id;
+    this.edad = edad;
+    this.correo = correo;
+    this.linea = linea;
+    this.estOn = estOn;
+    this.estOff = estOff;
+    this.hora = hora;
+    this.motivo = motivo;
+    this.rta1 = rta1;
+    this.rta2 = rta2;
+    this.rta3 = rta3;
+    this.rta4 = rta4;
+    this.rta5 = rta5;
+    this.rta6 = rta6;
+    this.rta7 = rta7;
+    this.rta8 = rta8;
+    this.rta9 = rta9;
+    this.rta10 = rta10;
+    this.rta11 = rta11;
+    }
+}
 
-//     alert("El encuestado debe ser mayor de 16 años.");
-  
-//     let edad = " ";
-//     let edadAprobada = false;
-//     while (edadAprobada === false){
-//         edad = parseInt(prompt("Ingresá tu edad."));
-//         if (edad>15){
-//             edadAprobada = true;
-//         }   
-//         else {
-//             alert ("Necesitás ser mayor de 16 años para responder esta encuesta.");
-//         }
-//     }
+const preg1 = document.querySelector("#preg1")
+const preg2 = document.querySelector("#preg2")
+const preg3 = document.querySelector("#preg3")
+const preg4 = document.querySelector("#preg4")
+const preg5 = document.querySelector("#preg5")
+const preg6 = document.querySelector("#preg6")
+const preg7 = document.querySelector("#preg7")
+const preg8 = document.querySelector("#preg8")
+const preg9 = document.querySelector("#preg9")
+const preg10 = document.querySelector("#preg10")
+const preg11 = document.querySelector("#preg11")
+const preg12 = document.querySelector("#preg12")
 
-// }
-
-// ingreso ()
-
-
-// class Registro {
-//     constructor(id, edad, correo, telefono, linea, estacionOn, estacionOff, hora, motivo) {
-//     this.id = id;
-//     this.edad = edad;
-//     this.correo = correo;
-//     this.telefono = telefono;
-//     this.linea = linea;
-//     this.estacionOn = estacionOn;
-//     this.estacionOff = estacionOff;
-//     this.hora = hora;
-//     this.motivo = motivo;
-//     }
-// }
-
-// const datosEncuestados = [];
-// datosEncuestados.push(new Registro("001", "20 años", "leo@gmail.com", "123456789", "A", "Acoyte", "Congreso", "10 am", "Estudio"));
-// datosEncuestados.push(new Registro("002", "35 años", "juana@gmail.com", "789456123", "C", "Constitución", "Diagonal Norte", "8 am",  "Trabajo"));
-// datosEncuestados.push(new Registro("003", "43 años", "maxi@gmail.com", "456789123", "B", "Florida", "Rosas", "17 pm",  "Trabajo"));
-
-// console.table (datosEncuestados);
-   
-// const nuevoEncuestado = {
-//     id: "004",
-//     edad: prompt("Ingresá tu edad: "),
-//     correo: prompt("Ingresá tu correo electrónico: "),
-//     telefono: prompt("Ingresá tu teléfono: "),
-//     linea: prompt("¿En qué línea te encontrás?"),
-//     estacionOn: prompt("¿En qué estación ingresaste al Subte?"),
-//     estacionOff: prompt("¿En qué estación salís del Subte?"),
-//     hora: prompt("¿A qué hora ingresaste al Subte?"),
-//     motivo: prompt("Elegí el motivo de tu viaje: trabajo - estudio - compras - salud - otros")
-// };
-
-// datosEncuestados.push(nuevoEncuestado);
-
-// console.table (datosEncuestados);
-
-// function buscarEstacion (){
-//     let estacionBuscada = prompt ("¿Qué estación querés buscar?")
-//     const resultado = datosEncuestados.find (estacion => estacion.estacionOn === estacionBuscada)
-//     console.table (resultado)
-//     }
-
-// buscarEstacion ()
-
-// let respuesta1
-// let respuesta2
-// let respuesta3
-// let respuesta4
-
-const selectPregunta1 = document.getElementById("pregunta1")
-
-const selectPregunta2 = document.getElementById("pregunta2")
-
-const selectPregunta3 = document.getElementById("pregunta3")
-
-const selectPregunta4 = document.getElementById("pregunta4")
-
-const selectPregunta5 = document.getElementById("pregunta5")
 
 function cargaPreg1 () {
     opcionesCalif.forEach(opcion =>{
-        selectPregunta1.innerHTML += `<option value =""> ${opcion} </option>`
+        preg1.innerHTML += `<option value="${opcion.valor}">${opcion.opcion}</option>`
     });
 }
 
 function cargaPreg2 () {
     opcionesModos.forEach(opcion =>{
-        selectPregunta2.innerHTML += `<option value =""> ${opcion} </option>`
+        preg2.innerHTML += `<option value="${opcion.valor}">${opcion.opcion}</option>`
     });
 }
 
 function cargaPreg3 () {
     opcionesSiNo.forEach(opcion =>{
-        selectPregunta3.innerHTML += `<option value =""> ${opcion} </option>`
+        preg3.innerHTML += `<option value="${opcion.valor}">${opcion.opcion}</option>`
     });
 }
 
 function cargaPreg4 () {
     opcionesCalif.forEach(opcion =>{
-        selectPregunta4.innerHTML += `<option value =""> ${opcion} </option>`
+        preg4.innerHTML += `<option value="${opcion.valor}">${opcion.opcion}</option>`
     });
 }
 
 function cargaPreg5 () {
     opcionesCalif.forEach(opcion =>{
-        selectPregunta5.innerHTML += `<option value =""> ${opcion} </option>`
+        preg5.innerHTML += `<option value="${opcion.valor}">${opcion.opcion}</option>`
     });
 }
 
@@ -115,40 +72,50 @@ cargaPreg3()
 cargaPreg4()
 cargaPreg5()
 
-let rta1
-let rta2
-let rta3
-let rta4
-let rta5
+const nuevoEncuestado = new Registro (idEncuestado.value, edadEncuestado.value, correoEncuestado.value, linea.value, estOn.value, estOff.value, horaViaje.value, motivoViaje.value, preg1.selectedIndex, preg2.value, preg3.value, preg4.value, preg5.value, preg6.value, preg7.value, preg8.value, preg9.value, preg10.value, preg11.value)
 
-class Respuestas {
-    constructor(rta1, rta2, rta3, rta4, rta5){
-        this.rta1 = rta1
-        this.rta2 = rta2
-        this.rta3 = rta3
-        this.rta4 = rta4
-        this.rta5 = rta5
+function guardarEncuesta () {
+    const datosResp = {
+        id: idEncuestado.value,
+        edad: edadEncuestado.value,
+        correo: correoEncuestado.value,
+        linea: linea.value,
+        estOn: estOn.value,
+        estOff: estOff.value,
+        hora: horaViaje.value,
+        motivo: motivoViaje.value,
+        rta1: preg1.value, 
+        rta2: preg2.value,
+        rta3: preg3.value,
+        rta4: preg4.value,
+        rta5: preg5.value,
+        rta6: preg6.value,
+        rta7: preg7.value,
+        rta8: preg8.value,
+        rta9: preg9.value,
+        rta10: preg10.value,
+        rta11: preg11.value,
     }
+    localStorage.setItem ("guardarEncuesta", JSON.stringify(datosResp))
+    location.reload()
 }
-
-const respuestas1 = {
-    rta1: "1",
-    rta2: "2",
-    rta3: "3",
-    rta4: "4",
-    rta5: "5", 
-}
-
 
 const botonA = document.querySelector(".btn-rtas")
 
-botonA.addEventListener ("click", ()=>
-    alert("Tus respuestas son: ", respuestas1))
+botonA.addEventListener ("click", (guardarEncuesta))
 
 
-// const respuestasEncuestado001 = []
+const respuestas = document.querySelector(".respuestas")
 
-// respuestasEncuestado001.push(respuesta1, respuesta2, respuesta3, respuesta4)
+let resumen = JSON.parse(localStorage.getItem("guardarEncuesta"))
 
-// console.table (respuestasEncuestado001)
+function mostrarRespuestas (){
+    resumen.forEach ((rta) => {
+      resumen.innerHTML += `<p>${rta}</p>`;
+    })
+}
+
+const botonB = document.querySelector(".btn-resumen")
+
+botonB.addEventListener ("click", (mostrarRespuestas))
 

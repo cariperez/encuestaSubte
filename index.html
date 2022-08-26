@@ -30,118 +30,137 @@
 
         <p>Responder las preguntas de esta encuesta lleva entre 10 y 15 minutos. Si vas a participar, por favor hacélo con compromiso y responsabilidad. No olvides que las respuestas de los usuarios nos orientan sobre el camino a seguir para hacer el servicio más eficiente. Desde ya, muchas gracias por tu tiempo!</p>
         
-        <h3>A) Sobre el servicio</h3>
+        <h3>A) Datos encuestado</h3>
 
-        <div class="pregunta">
-            <p>1- En general, ¿cómo calificás el servicio de Subte de la Ciudad de Buenos Aires?</p>
-            <div>
-                <label for="selectOpcion">Seleccioná tu respuesta:</label>
-                <select id="pregunta1" name="selectOpcion">
-                    <option value="" selected disabled>...</option> -->
-                </select>
-            </div>
+        <div class="datosEncuestado">
+            <form action="">
+                <ul>
+                    <li>
+                        <label for="id">ID:</label>
+                        <input type="number" id="id" name="user_id">
+                    </li>
+                    <li>
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="user_edad" value="16" min="16">
+                    </li>
+                    <li>
+                        <label for="correo">Correo:</label>
+                        <input type="text" id="correo" name="user_correo">
+                    </li>
+                    <li>
+                        <label for="linea">Línea en la que te encontrás:</label>
+                        <input type="text" id="linea" name="user_linea">
+                    </li>
+                    <li>
+                        <label for="estacionOn">Estación en la que ingresaste:</label>
+                        <input type="text" id="estOn" name="user_estacionOn">
+                    </li>
+                    <li>
+                        <label for="estacionOff">Estación en la que salís:</label>
+                        <input type="text" id="estOff" name="user_estacionOff">
+                    </li>
+                    <li>
+                        <label for="hora">Hora actual:</label>
+                        <input type="datetime" id="hora" name="hora">
+                    </li>
+                    <li>
+                        <label for="motivo">Motivo del viaje:</label>
+                        <select id="motivo" name="selectOpcion">
+                        <option value="" selected disabled>...</option> -->
+                        <option value="1">Trabajo</option>
+                        <option value="2">Educación</option>
+                        <option value="3">Trámite Personal</option>
+                        <option value="4">Salud</option>
+                        <option value="5">Compras</option>
+                        <option value="6">Social</option>
+                        <option value="7">Deporte, cultura, ocio.</option>
+                        </select>
+                    </li>
+                </ul>    
+                </form>
         </div>
-
-        <div class="pregunta">
-            <p>2- ¿Cuál de estos medios de transporte público creés que brinda un mejor servicio?</p>
-            <div>
-                <label for="selectOpcion">Seleccioná tu respuesta:</label>
-                <select id="pregunta2" name="selectOpcion">
-                    <option value="" selected disabled>...</option> -->
-                </select>
-            </div>
-        </div>
-
-        <div class="pregunta"></div>
-            <p>3- ¿Utilizaste alguna vez la red WiFi del subte?</p>
-            <div>
-                <label for="selectOpcion">Seleccioná tu respuesta:</label>
-                <select id="pregunta3" name="selectOpcion">
-                    <option value="" selected disabled>...</option> -->
-                </select>
-            </div>
-        </div>
-
-        <div class="pregunta"></div>
-            <p>4- ¿Cómo calificarías el servicio de WiFi?</p>
-            <div>
-                <label for="selectOpcion">Seleccioná tu respuesta:</label>
-                <select id="pregunta4" name="selectOpcion">
-                    <option value="" selected disabled>...</option> -->
-                </select>
-            </div>
-        </div>
-
-        <div class="pregunta"></div>
-            <p>5- En cuanto al servicio de subtes ¿cómo calificarías el estado general de las estaciones?</p>
-            <div>
-                <label for="selectOpcion">Seleccioná tu respuesta:</label>
-                <select id="pregunta5" name="selectOpcion">
-                    <option value="" selected disabled>...</option> -->
-                </select>
-            </div>
-        </div>
-
-        <button class="btn-rtas">Ver respuestas Sección A</button>
-
-        <h3>B) Encuesta de nivel socio-económico</h3>
-
-        <p>9- ¿Trabajás?</p>
-
-        <p>10- ¿Estudiás?</p>
-
-        <p>11- Cantidad de vehículos disponibles en el hogar (auto, camioneta, utilitario).</p>
-
-        <p>12- Año del más nuevo (o antigüedad del más nuevo).</p>
-
         
+
+        <h3>B) Sobre el servicio</h3>
+
+        <p>1- En general, ¿cómo calificás el servicio de Subte de la Ciudad de Buenos Aires?</p>
+        <div>
+            <label for="selectOpcion">Seleccioná tu respuesta:</label>
+            <select id="preg1" name="selectOpcion">
+                <option value="" selected disabled>...</option>
+            </select>
+        </div>
+        
+        <p>2- ¿Cuál de estos medios de transporte público creés que brinda un mejor servicio?</p>
+        <div>
+            <label for="selectOpcion">Seleccioná tu respuesta:</label>
+            <select id="preg2" name="selectOpcion">
+                <option value="" selected disabled>...</option>
+            </select>
+        </div>
+
+        <p>3- ¿Utilizaste alguna vez la red WiFi del subte?</p>
+        <div>
+            <label for="selectOpcion">Seleccioná tu respuesta:</label>
+            <select id="preg3" name="selectOpcion">
+                <option value="" selected disabled>...</option>
+            </select>
+        </div>
+
+        <p>4- ¿Cómo calificarías el servicio de WiFi?</p>
+        <div>
+            <label for="selectOpcion">Seleccioná tu respuesta:</label>
+            <select id="preg4" name="selectOpcion">
+                <option value="" selected disabled>...</option>
+            </select>
+        </div>
+
+        <p>5- En cuanto al servicio de subtes ¿cómo calificarías el estado general de las estaciones?</p>
+        <div>
+            <label for="selectOpcion">Seleccioná tu respuesta:</label>
+            <select id="preg5" name="selectOpcion">
+                <option value="" selected disabled>...</option>
+            </select>
+        </div>
+
+
         <h3>C) Sobre tus viajes</h3>
         
         <p>Para tener en cuenta: un viaje es el desplazamiento de un espacio geográfico a otro a través del uso de diferentes elementos que actúan como medios de transporte. Aunque combines varios modos de transporte durante tu desplazamiento, se considera un viaje. Si combinás varios modos de transporte, el traslado en cada uno de ellos se denomina "etapa"; son varias etapas dentro de un mismo viaje.</p>
+        
+        <p>6- ¿Cuántas veces por mes estimás que viajás en Subte? (Recordá que si vas y volvés en un día son dos viajes)</p>
+        <input type="text" id="preg6">
 
-        <p>13- ¿Cuántas veces por mes estimás que viajás en Subte? (Recordá que si vas y volvés en un día son dos viajes)</p>
-
-        <p>14- Esquina más próxima al domicilio (calle 1):</p>
-
-        <p>15- Indicar calle de intersección o altura redondeada:</p>
-
-        <p>16- Barrio</p>
-
-        <p>17- Localidad</p>
-
-        <p>18- Partido</p>
-
-        <p>19- Confirmá la ubicación en el mapa:</p>
-
-        <p>20- Esquina más próxima al trabajo (calle 1) -si trabajás-:</p>
-
-        <p>21- Indicar calle de intersección o altura redondeada:</p>
-
-        <p>22- Barrio</p>
-
-        <p>23- Localidad</p>
-
-        <p>24- Partido</p>
-
-        <p>25- Confirmá la ubicación en el mapa:</p>
-
-        <p>26- Esquina más próxima al lugar de estudio (calle 1) -si estudiás-:</p>
-
-        <p>27- Indicar calle de intersección o altura redondeada:</p>
-
-        <p>28- Barrio</p>
-
-        <p>29- Localidad</p>
-
-        <p>30- Partido</p>
-
-        <p>31- Confirmá la ubicación en el mapa:</p>
+        <p>7- Esquina más próxima al domicilio (calle 1):</p>
+        <input type="text" name="" id="preg7">
+        
+        <p>8- Indicar calle de intersección o altura redondeada:</p>
+        <input type="text" name="" id="preg8">
+        
+        <p>9- Barrio</p>
+        <input type="text" name="" id="preg9">
+        
+        <p>10- Localidad</p>
+        <input type="text" name="" id="preg10">
+        
+        <p>11- Partido</p>
+        <input type="text" name="" id="preg11">
+        
+        <p>12- Confirmá la ubicación en el mapa:</p>
+        
+        <button class="btn-rtas fuente">Enviar respuestas</button>
 
     </section>
 
-<footer>
-    <h3 class="fuente textoFooter">¡Muchas gracias! Con tus respuestas, estás ayudando a la Ciudad a contar con un mejor servicio de Subte.</h3>
-</footer>
+    <span class="respuestas"></span>
+
+    <footer>
+        <h3 class="fuente textoFooter">¡Muchas gracias! Con tus respuestas, estás ayudando a la Ciudad a contar con un mejor servicio de Subte.</h3>
+
+        <div class="boton-resumen">
+            <button class="btn-resumen fuente">Ver respuestas</button>
+        </div>
+    </footer>
     
 </body>
 </html>

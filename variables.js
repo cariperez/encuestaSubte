@@ -1,7 +1,33 @@
-const nuevoEncuestado = {}
+const idEncuestado = document.querySelector("#id")
+const edadEncuestado = document.querySelector("#edad")
+const correoEncuestado = document.querySelector("#correo")
+const linea = document.querySelector("#linea")
+const estOn = document.querySelector("#estOn")
+const estOff = document.querySelector("#estOff")
+const horaViaje = document.querySelector("#hora")
+const motivoViaje = document.querySelector("#motivo")
 
-const opcionesCalif = ["1-Muy bueno", "2-Bueno", "3-Regular", "4-Malo", "5-Muy malo", "9-NS/NC"];
+// Base de datos ficticia para Select:
 
-const opcionesModos = ["1-Subte", "2-Colectivo", "3-Tren", "4-Metrobús", "5-Premetro", "7-Otros (especificar al final)"]
+const opcionesCalif = [
+    {opcion: "1-Muy bueno", valor:1},
+    {opcion: "2-Bueno", valor:2},
+    {opcion: "3-Regular", valor:3},
+    {opcion: "4-Malo", valor:4},
+    {opcion: "5-Muy malo", valor:5},
+    {opcion: "9-NS/NC", valor:6},
+]
 
-const opcionesSiNo = ["1-Si", "2-No"]
+const opcionesModos = [
+    {opcion: "1-Subte", valor:1},
+    {opcion: "2-Colectivo", valor:2}, 
+    {opcion: "3-Tren", valor:3},
+    {opcion: "4-Metrobús", valor:4},
+    {opcion: "5-Premetro", valor:5},
+    {opcion: "7-Otros", valor: 7},
+]
+
+const opcionesSiNo = [
+    {opcion: "1-Si", valor: 1},
+    {opcion: "2-No",valor: 2},
+]
